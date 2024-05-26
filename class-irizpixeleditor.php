@@ -26,7 +26,7 @@ if ( ! class_exists( 'IrizPixelAPI' ) ) {
 }
 
 /**
- * Pixel Editor plugin base class
+ * Pixel Editor plugin base class.
  */
 class IrizPixelEditor {
 	/**
