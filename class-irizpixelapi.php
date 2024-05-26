@@ -26,8 +26,7 @@ class IrizPixelAPI {
 	private $endpoint_base = 'data';
 
 	/**
-	 * Construtor.
-	 * Configuring API endpoints.
+	 * Construtor, configuring API endpoints.
 	 */
 	public function __construct() {
 		add_action( 'rest_api_init', array( $this, 'register_endpoints' ) );
