@@ -50,7 +50,7 @@ class IrizPixelEditor {
 		?>
 		<div class="wrap">
 			<h1>Pixel Editor</h1>
-			<div id="pixel-admin-app">Hello!</div>
+			<div id="pixel-admin-app">Hello d!</div>
 		</div>
 		<?php
 	}
