@@ -34,6 +34,7 @@ class IrizPixelEditor {
 	 * Enqueue scripts.
 	 */
 	public function enqueue_scripts() {
+		wp_enqueue_script( 'build', plugins_url( 'pixel-editor/dist/bundle.js', __FILE__ ), array( 'react', 'react-dom' ), wp_rand( 1, 100 ), true );
 	}
 
 	/**
@@ -50,7 +51,7 @@ class IrizPixelEditor {
 		?>
 		<div class="wrap">
 			<h1>Pixel Editor</h1>
-			<div id="pixel-admin-app">Hello!</div>
+			<div id="pixel-admin-app"></div>
 		</div>
 		<?php
 	}
