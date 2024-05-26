@@ -19,12 +19,18 @@
  */
 
 defined( 'ABSPATH' ) || die( 'Access Denied' );
+
+// Include the class file for API endpoint.
+if ( ! class_exists( 'IrizPixelAPI' ) ) {
+	require_once plugin_dir_path( __FILE__ ) . 'class-irizpixelapi.php';
+}
+
 /**
  * Pixel Editor plugin base class
  */
 class IrizPixelEditor {
 	/**
-	 * Constructor to load required files
+	 * Constructor to load required files.
 	 */
 	public function __construct() {
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
@@ -59,4 +65,8 @@ class IrizPixelEditor {
 
 if ( class_exists( 'IrizPixelEditor' ) ) {
 	new IrizPixelEditor();
+}
+
+if ( class_exists( 'IrizPixelAPI' ) ) {
+	new IrizPixelAPI();
 }
