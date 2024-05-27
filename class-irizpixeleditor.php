@@ -25,6 +25,11 @@ if ( ! class_exists( 'IrizPixelAPI' ) ) {
 	require_once plugin_dir_path( __FILE__ ) . 'class-irizpixelapi.php';
 }
 
+// Include the class file for custom block.
+if ( ! class_exists( 'IrizPixelBlock' ) ) {
+	require_once plugin_dir_path( __FILE__ ) . 'class-irizpixelblock.php';
+}
+
 /**
  * Pixel Editor plugin base class
  */
@@ -69,4 +74,8 @@ if ( class_exists( 'IrizPixelEditor' ) ) {
 
 if ( class_exists( 'IrizPixelAPI' ) ) {
 	new IrizPixelAPI();
+}
+
+if ( class_exists( 'IrizPixelBlock' ) ) {
+	new IrizPixelBlock();
 }
