@@ -26,7 +26,7 @@ class IrizPixelBlock {
 	public function pixel_editor_block_assets() {
 		wp_register_script(
 			'pixel-editor-block',
-			plugins_url( 'pixel-editor/dist/block.js', __FILE__ ),
+			plugins_url( 'js/block.js', __FILE__ ),
 			array( 'wp-blocks', 'wp-element', 'wp-editor' ),
 			wp_rand( 1, 100 ),
 			true
