@@ -11,7 +11,7 @@
  * Requires PHP: 5.0
  * Author: Rizwan Iliyas
  * Author URI: https://github.com/web4mybiz
- * License:  GPLv2 or later
+ * License:  GPLv2 or later.
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Update URI:
  * Text Domain: iriz-pixel-editor
