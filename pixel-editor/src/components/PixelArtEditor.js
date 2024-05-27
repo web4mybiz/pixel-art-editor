@@ -39,7 +39,8 @@ const savePixelArt = async (pixels, setSaved, setSaveText) => {
     }
 
     const result = await response.json();
-
+    setSaveText('Saved');
+    setSaved(true);
   } catch (error) {
     console.error('Error saving pixel art data:', error);
   }
@@ -47,8 +48,10 @@ const savePixelArt = async (pixels, setSaved, setSaveText) => {
 
 const PixelArtEditor = () => {
   const [pixels, setPixels] = useState([]);
+  const [saved, setSaved] = useState(true);
   const [selectedColor, setSelectedColor] = useState('#000000');
   const [loading, setLoading] = useState(true);
+  const [saveText, setSaveText] = useState('Save Pixel Art');
 
   useEffect(() => {
     const loadPixelArt = async () => {
@@ -67,6 +70,8 @@ const PixelArtEditor = () => {
     );
     
     setPixels(newPixels);
+    setSaveText('Save Pixel Art');
+    setSaved(false);
   };
 
   if (loading) {
@@ -97,7 +102,7 @@ const PixelArtEditor = () => {
         {pixels.map((row, rowIndex) => (
           <Row key={rowIndex} rowData={row} onPixelClick={(colIndex) => handlePixelClick(rowIndex, colIndex)} />
         ))}
-        <button onClick={() => savePixelArt(pixels)} >Save</button>
+        <button onClick={() => savePixelArt(pixels, setSaved, setSaveText)} disabled={saved}>{saveText}</button>
       </div>
     </div>
   );
