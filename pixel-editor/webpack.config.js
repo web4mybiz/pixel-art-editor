@@ -30,4 +30,13 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx'],
   },
+  externals: {
+    react: 'React',
+    'react-dom': 'ReactDOM',
+    '@wordpress/blocks': ['wp', 'blocks'],
+    '@wordpress/block-editor': ['wp', 'blockEditor'],
+    '@wordpress/components': ['wp', 'components'],
+    '@wordpress/element': ['wp', 'element'],
+    '@wordpress/i18n': ['wp', 'i18n'],
+  },
 };
