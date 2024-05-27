@@ -45,7 +45,7 @@ class IrizPixelEditor {
 	 * Enqueue scripts.
 	 */
 	public function enqueue_scripts() {
-		wp_enqueue_script( 'build', plugins_url( 'pixel-editor/dist/bundle.js', __FILE__ ), array( 'react', 'react-dom' ), wp_rand( 1, 100 ), true );
+		wp_enqueue_script( 'build', plugins_url( 'pixel-editor/dist/bundle.js', __FILE__ ), array( 'jquery' ), wp_rand( 1, 100 ), true );
 	}
 
 	/**
