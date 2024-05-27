@@ -16,7 +16,7 @@ registerBlockType('iriz/pixel-art', {
         },
         pixels: {
             type: 'string',
-            default: '[]', // Assuming pixel data is stored as JSON string
+            default: '[]', // Assuming pixel data is stored as JSON string.
         },
     },
     edit: (props) => {
